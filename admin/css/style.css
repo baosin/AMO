@@ -1,0 +1,58 @@
+/* 自定義樣式 */
+
+/* 日期輸入框樣式 */
+input[type="date"] {
+    position: relative;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    background: transparent;
+    bottom: 0;
+    color: transparent;
+    cursor: pointer;
+    height: auto;
+    left: 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: auto;
+}
+
+input[type="date"]::before {
+    color: #6c757d;
+    content: attr(placeholder);
+    position: absolute;
+    left: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+input[type="date"]:focus::before,
+input[type="date"]:valid::before {
+    display: none;
+}
+
+/* 圖片相關樣式 */
+.restaurant-thumbnail {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.restaurant-thumbnail:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+#imagePreview, #editImagePreview {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}

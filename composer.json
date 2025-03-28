@@ -1,0 +1,9 @@
+{
+    "name": "amo/order-system",
+    "description": "Order Management System",
+    "type": "project",
+    "require": {
+        "phpoffice/phpspreadsheet": "^1.29",
+        "minishlink/web-push": "^8.0"
+    }
+}
